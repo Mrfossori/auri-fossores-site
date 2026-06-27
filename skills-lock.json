@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "skills": {
+    "executing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/executing-plans/SKILL.md",
+      "computedHash": "d3e5b64b97d4713e3a7f33625cae12ed9305898d85a1c6309f46765c39a9d789"
+    },
+    "mobile-responsiveness": {
+      "source": "hoodini/ai-agents-skills",
+      "sourceType": "github",
+      "skillPath": "skills/mobile-responsiveness/SKILL.md",
+      "computedHash": "e42fd317d47d851a70b575b64ddf90660ded8a97f4f9b357ae747e0f97b58ec9"
+    },
+    "writing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/writing-plans/SKILL.md",
+      "computedHash": "b73b59d43c34c3fc225bfae419c458bb216af80df25fc0c545dfa7fd2a161722"
+    }
+  }
+}
