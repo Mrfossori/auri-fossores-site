@@ -859,4 +859,3 @@ Report:
 3. Stop after quality gates to report local and CI-equivalent test results.
 4. Stop before CSS cleanup if any candidate has a live source reference.
 5. Never delete the original PNG, WhatsApp placeholder, or visual form in this task.
-
