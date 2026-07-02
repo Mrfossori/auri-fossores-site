@@ -44,6 +44,12 @@ test("mobile menu opens, navigates, and closes", async ({ page }, testInfo) => {
   await page.locator('.mobile-nav a[href="/sobre"]').click();
   await expect(page).toHaveURL(/\/sobre$/);
   await expect(trigger).toHaveAttribute("aria-expanded", "false");
+
+  await page.goto("/");
+  await trigger.click();
+  await page.keyboard.press("Escape");
+  await expect(trigger).toHaveAttribute("aria-expanded", "false");
+  await expect(trigger).toBeFocused();
 });
 
 test("home hero and gateways remain visible", async ({ page }) => {
