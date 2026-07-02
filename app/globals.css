@@ -258,7 +258,6 @@ svg {
 .dark-button,
 .secondary-dark-button,
 .header-action,
-.text-link,
 .card-cta {
   display: inline-flex;
   min-height: 2.75rem;
@@ -457,7 +456,6 @@ svg {
   font-weight: 700;
 }
 
-.manifesto-section,
 .content-section {
   padding-block: var(--section-space);
 }
@@ -697,23 +695,10 @@ svg {
   line-height: 1.7;
 }
 
-.section-topline {
-  display: grid;
-  gap: 1.25rem;
-}
-
-.text-link {
-  width: fit-content;
-  justify-content: flex-start;
-  padding-inline: 0;
-  color: var(--gold);
-}
-
 .card-grid,
 .service-list,
 .product-showcase,
-.editorial-list,
-.editorial-preview {
+.editorial-list {
   display: grid;
   gap: 1rem;
   margin-top: clamp(2rem, 8vw, 3.25rem);
@@ -828,48 +813,6 @@ svg {
 .article-card.is-featured h3 {
   font-size: clamp(2rem, 9vw, 3.8rem);
   line-height: 1;
-}
-
-.final-cta {
-  position: relative;
-  overflow: hidden;
-  border: 0.0625rem solid rgba(201, 162, 39, 0.5);
-  border-radius: 0.5rem;
-  padding: clamp(2rem, 8vw, 4rem);
-  color: var(--obsidian);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent 38%), var(--gold);
-}
-
-.final-cta::after {
-  position: absolute;
-  top: -4rem;
-  right: -4rem;
-  width: 12rem;
-  height: 12rem;
-  border: 0.0625rem solid rgba(17, 17, 17, 0.16);
-  border-radius: 50%;
-  content: "";
-}
-
-.final-cta .display-label {
-  color: rgba(17, 17, 17, 0.72);
-}
-
-.final-cta h2 {
-  position: relative;
-  max-width: 18ch;
-  margin: 0.9rem 0 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.2rem, 9vw, 4.8rem);
-  font-weight: 500;
-  line-height: 1;
-  overflow-wrap: anywhere;
-}
-
-.final-cta .dark-button {
-  position: relative;
-  width: fit-content;
-  margin-top: 1.75rem;
 }
 
 .page-hero {
@@ -1294,16 +1237,10 @@ svg {
     justify-content: flex-end;
   }
 
-  .section-topline {
-    align-items: end;
-    grid-template-columns: minmax(0, 1fr) auto;
-  }
-
   .card-grid,
   .service-list,
   .product-showcase,
-  .editorial-list,
-  .editorial-preview {
+  .editorial-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1435,8 +1372,6 @@ svg {
     padding-block: 4rem;
   }
 
-  .preview-grid,
-  .pillars-grid,
   .product-showcase {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1452,16 +1387,6 @@ svg {
   .service-list .brand-card:nth-child(4),
   .service-list .brand-card:nth-child(5) {
     grid-column: span 3;
-  }
-
-  .editorial-preview {
-    grid-template-columns: 1.2fr 0.8fr 0.8fr;
-  }
-
-  .editorial-preview .article-card.is-featured {
-    min-height: 32rem;
-    grid-column: auto;
-    grid-row: span 1;
   }
 
   .editorial-list {
@@ -1484,7 +1409,6 @@ svg {
   .dark-button:hover,
   .secondary-dark-button:hover,
   .header-action:hover,
-  .text-link:hover,
   .card-cta:hover {
     transform: translateY(-0.15rem);
   }
