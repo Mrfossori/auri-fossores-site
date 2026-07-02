@@ -2,10 +2,15 @@
 
 Protótipo visual navegável do site oficial da Auri Fossores.
 
+## Ambiente suportado
+
+- Node.js 22, 23 ou 24
+- npm 11
+
 ## Rodar localmente
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
@@ -20,9 +25,15 @@ npm run dev -- -H 127.0.0.1 -p 8080
 ## Scripts
 
 ```bash
+npm run check
 npm run build
 npm run lint
 ```
+
+## Arquivos locais
+
+As pastas `.next`, `node_modules`, `.vercel`, `outputs` e `work` são geradas
+localmente e não devem ser versionadas.
 
 ## O que esta V0 contém
 

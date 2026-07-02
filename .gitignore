@@ -1,1 +1,30 @@
-node_modules
+# Dependencies
+/node_modules/
+
+# Next.js
+/.next/
+/out/
+
+# Deployment
+/.vercel/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Logs and coverage
+*.log
+/coverage/
+/playwright-report/
+/test-results/
+
+# Local agent/runtime output
+/outputs/
+/work/
+/.codex/
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+*.swp
