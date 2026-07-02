@@ -77,10 +77,11 @@ export default function Home() {
       <section className="home-hero">
         <div className="home-hero-media">
           <Image
-            src="/auri-hero.png"
+            src="/auri-hero.webp"
             alt="Composição escura com ouro mineral e elementos de tecnologia."
             fill
             priority
+            sizes="100vw"
           />
         </div>
 
