@@ -60,8 +60,8 @@ export default function SobrePage() {
           </div>
           <div className="vision-copy">
             <p>
-              A Auri nasce como marca e cresce como empresa: sistemas, automações, editorial,
-              produtos digitais, posicionamento e lifestyle.
+              A Auri nasce como marca de conteúdo e evolui para um ecossistema de produtos,
+              sistemas e lifestyle.
             </p>
             <p>
               O posicionamento é direto: ajudar pessoas e negócios a pensarem melhor, operarem

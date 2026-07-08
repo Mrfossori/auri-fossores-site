@@ -177,7 +177,7 @@ export const articles = [
 export const values = [
   "Fé",
   "Propósito",
-  "Hustle com dignidade",
+  "Garimpo",
   "Autenticidade",
   "Resultado real",
   "Tecnologia como ferramenta",
