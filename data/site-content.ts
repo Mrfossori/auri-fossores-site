@@ -1,9 +1,7 @@
 import {
-  ArrowUpRight,
   Bot,
   BookOpen,
   Boxes,
-  BrainCircuit,
   Dumbbell,
   Gem,
   Goal,
@@ -54,44 +52,6 @@ export const pillars = [
     title: "Autenticidade",
     copy: "O que é dito é o que é vivido. Sem máscara. Sem promessa vazia.",
     icon: Gem,
-  },
-];
-
-export const services = [
-  {
-    title: "Automações para negócios",
-    description:
-      "Fluxos para reduzir tarefas manuais, organizar rotinas e colocar operação repetível no lugar do improviso.",
-    eyebrow: "Processo",
-    icon: Workflow,
-  },
-  {
-    title: "Sistemas e ERPs simples",
-    description:
-      "Soluções para pequenos negócios que cansaram de depender de planilhas soltas, caderno e memória.",
-    eyebrow: "Gestão",
-    icon: Boxes,
-  },
-  {
-    title: "IA aplicada à produtividade",
-    description:
-      "Uso prático de IA para rotina, vendas, conteúdo, organização e decisão. Sem teatro futurista.",
-    eyebrow: "IA real",
-    icon: BrainCircuit,
-  },
-  {
-    title: "Posicionamento digital",
-    description:
-      "Estratégia visual e conteúdo para marcas que precisam parecer tão profissionais quanto o que entregam.",
-    eyebrow: "Marca",
-    icon: Layers3,
-  },
-  {
-    title: "Afiliados e recomendações",
-    description:
-      "Livros, ferramentas e ativos alinhados à disciplina, tecnologia, performance e construção.",
-    eyebrow: "Curadoria",
-    icon: ArrowUpRight,
   },
 ];
 
