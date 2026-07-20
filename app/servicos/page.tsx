@@ -6,7 +6,7 @@ import {
   automationApplications,
   automationBenefits,
   positioningBenefits,
-  positioningDeliverables,
+  positioningGroups,
   serviceFronts,
   systemApplications,
   systemBenefits,
@@ -108,15 +108,15 @@ export default function ServicosPage() {
                 do processo.
               </h3>
               <p>
-                Estoque atualizado à mão, pedidos espalhados e tarefas repetitivas consomem tempo e
-                deixam a operação vulnerável a falhas de comunicação e retrabalho.
+                Estoque atualizado à mão, pedidos espalhados e tarefas repetitivas consomem tempo,
+                aumentam o retrabalho e deixam a operação vulnerável a falhas.
               </p>
             </div>
             <div className={styles.solutionBlock}>
               <span className={styles.copyLabel}>O que a Auri organiza</span>
               <p>
-                A Auri conecta etapas, organiza informações e cria fluxos que tiram tarefas
-                repetitivas do caminho sem adicionar complexidade desnecessária.
+                A Auri conecta etapas, organiza informações e automatiza rotinas sem adicionar
+                complexidade desnecessária.
               </p>
               <BulletList items={automationApplications} />
             </div>
@@ -127,7 +127,7 @@ export default function ServicosPage() {
           <div className={styles.resultRow}>
             <div>
               <span className={styles.copyLabel}>Benefício prático</span>
-              <h3>Menos retrabalho e erro. Mais velocidade, organização e controle.</h3>
+              <h3>Menos retrabalho e falhas. Mais velocidade e controle.</h3>
             </div>
             <BulletList items={automationBenefits} className={styles.benefitList} />
             <Link className="primary-button" href="/contato">
@@ -156,15 +156,15 @@ export default function ServicosPage() {
                 negócio.
               </h3>
               <p>
-                Sem uma visão central, acompanhar vendas, estoque, financeiro e tarefas depende de
-                conferências constantes e memória.
+                Sem uma visão central, acompanhar vendas, estoque e financeiro exige conferências
+                constantes e depende da memória.
               </p>
             </div>
             <div className={styles.solutionBlock}>
               <span className={styles.copyLabel}>O que a Auri desenvolve</span>
               <p>
-                Sistemas e ERPs adaptados à operação para centralizar informações, organizar
-                rotinas e dar visibilidade ao que precisa de decisão.
+                A Auri desenvolve sistemas e ERPs adaptados à operação, reunindo informações e
+                rotinas em um só lugar.
               </p>
               <div className={styles.applicationTags}>
                 {systemApplications.map((application) => (
@@ -174,35 +174,12 @@ export default function ServicosPage() {
             </div>
           </div>
 
-          <div className={styles.proofSection}>
-            <div className={styles.proofHeading}>
-              <span className="display-label">Soluções desenvolvidas pela Auri</span>
-              <h3>Software funcional para rotinas reais.</h3>
-            </div>
-            <div className={styles.proofList}>
-              <article>
-                <span>01</span>
-                <div>
-                  <h4>AdegaERP</h4>
-                  <p>Gestão de vendas, produtos, estoque, pagamentos, relatórios e financeiro.</p>
-                </div>
-              </article>
-              <article>
-                <span>02</span>
-                <div>
-                  <h4>Sistema de agendamento</h4>
-                  <p>Organização de horários, serviços e acompanhamento da rotina de atendimento.</p>
-                </div>
-              </article>
-            </div>
-          </div>
-
           <ErpShowcase />
 
           <div className={styles.resultRow}>
             <div>
               <span className={styles.copyLabel}>Benefício prático</span>
-              <h3>Visão clara da operação para acompanhar, organizar e decidir melhor.</h3>
+              <h3>Uma visão clara da operação para acompanhar e decidir melhor.</h3>
             </div>
             <BulletList items={systemBenefits} className={styles.benefitList} />
             <Link className="primary-button" href="/contato">
@@ -227,30 +204,29 @@ export default function ServicosPage() {
             <div className={styles.problemBlock}>
               <span className={styles.copyLabel}>O problema</span>
               <h3>
-                Quando site, Google, Instagram e WhatsApp apresentam informações diferentes, a
-                confiança se perde antes da conversa começar.
+                Quando o site, o perfil no Google, o Instagram e o WhatsApp apresentam informações
+                diferentes, a confiança se perde antes mesmo da conversa começar.
               </h3>
               <p>
-                Canais incompletos dificultam encontrar o negócio, entender a oferta e saber qual é
-                o próximo passo para entrar em contato.
+                Canais incompletos dificultam encontrar o negócio, entender a oferta e saber como
+                entrar em contato.
               </p>
             </div>
             <div className={styles.solutionBlock}>
               <span className={styles.copyLabel}>O que a Auri organiza</span>
               <p>
-                Uma presença digital coerente, capaz de apresentar produtos e serviços com clareza
-                e conduzir o cliente até um ponto de contato real.
+                A Auri organiza uma presença coerente para apresentar produtos e serviços com
+                clareza e conduzir o cliente até um canal de contato.
               </p>
-              <BulletList items={positioningDeliverables} />
             </div>
           </div>
 
-          <DigitalPresenceMap />
+          <DigitalPresenceMap groups={positioningGroups} />
 
           <div className={styles.resultRow}>
             <div>
               <span className={styles.copyLabel}>Benefício prático</span>
-              <h3>Presença profissional, informação consistente e caminhos de contato claros.</h3>
+              <h3>Presença profissional, informações consistentes e contato facilitado.</h3>
             </div>
             <BulletList items={positioningBenefits} className={styles.benefitList} />
             <Link className="primary-button" href="/contato">
@@ -270,8 +246,8 @@ export default function ServicosPage() {
             real.
           </h2>
           <p>
-            Conte como sua operação funciona hoje, onde o trabalho trava e o que você precisa
-            organizar. A primeira conversa começa pelo contexto.
+            Conte como sua operação funciona, onde o trabalho trava e o que precisa ser organizado.
+            A primeira conversa começa pelo contexto.
           </p>
           <Link className="dark-button" href="/contato">
             Falar sobre meu negócio

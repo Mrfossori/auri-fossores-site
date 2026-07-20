@@ -1,4 +1,13 @@
-import { Boxes, PanelsTopLeft, Workflow, type LucideIcon } from "lucide-react";
+import {
+  Boxes,
+  Globe2,
+  Megaphone,
+  Palette,
+  PanelsTopLeft,
+  Search,
+  Workflow,
+  type LucideIcon,
+} from "lucide-react";
 
 export type ServiceFront = {
   id: "automacoes" | "sistemas" | "posicionamento";
@@ -6,6 +15,12 @@ export type ServiceFront = {
   label: string;
   title: string;
   summary: string;
+  icon: LucideIcon;
+};
+
+export type PositioningGroup = {
+  title: string;
+  description: string;
   icon: LucideIcon;
 };
 
@@ -37,59 +52,58 @@ export const serviceFronts: ServiceFront[] = [
 ];
 
 export const automationApplications = [
-  "Atualização automática ou assistida de estoque",
-  "Organização de pedidos e registro de vendas",
+  "Estoque, pedidos e vendas atualizados no mesmo fluxo",
   "Alertas operacionais e comunicação entre etapas",
-  "Organização de informações logísticas",
   "Conexão entre formulários, planilhas, sistemas e canais",
-  "Redução de tarefas manuais e retrabalho",
+  "Informações logísticas organizadas com menos retrabalho",
 ];
 
 export const automationBenefits = [
-  "Menos retrabalho",
-  "Menos erros",
-  "Mais velocidade",
-  "Informações organizadas",
-  "Maior controle operacional",
+  "Menos tarefas repetidas e falhas",
+  "Mais velocidade e informações organizadas",
+  "Maior controle da operação",
 ];
 
 export const systemApplications = [
-  "Estoque",
-  "Produtos",
-  "Vendas",
+  "Estoque e produtos",
+  "Vendas e pedidos",
   "Financeiro",
   "Relatórios",
-  "Clientes",
-  "Agenda",
-  "Serviços",
-  "Pedidos",
+  "Clientes e agenda",
   "Acompanhamento operacional",
 ];
 
 export const systemBenefits = [
-  "Visão mais clara do negócio",
   "Informações centralizadas",
-  "Controle operacional",
-  "Acompanhamento de vendas, estoque e financeiro",
-  "Menos dependência de cadernos e planilhas espalhadas",
+  "Visão de vendas, estoque e financeiro",
+  "Menos dependência de controles espalhados",
 ];
 
-export const positioningDeliverables = [
-  "Criação de sites e páginas institucionais",
-  "Landing pages para produtos, serviços ou captação",
-  "Organização do perfil no Google",
-  "Configuração e melhoria do WhatsApp Business",
-  "Organização do Instagram",
-  "Identidade e coerência entre canais",
-  "Criativos para comunicação e campanhas",
-  "Revisão dos pontos de contato digitais",
+export const positioningGroups: PositioningGroup[] = [
+  {
+    title: "Presença e identidade",
+    description: "Organização visual e coerência entre os canais do negócio.",
+    icon: Palette,
+  },
+  {
+    title: "Sites e páginas",
+    description: "Sites institucionais, landing pages e páginas de produtos ou serviços.",
+    icon: Globe2,
+  },
+  {
+    title: "Google e canais de contato",
+    description: "Perfil no Google, WhatsApp Business e caminhos claros para contato.",
+    icon: Search,
+  },
+  {
+    title: "Criativos e comunicação",
+    description: "Peças visuais e materiais para apresentar ofertas e campanhas.",
+    icon: Megaphone,
+  },
 ];
 
 export const positioningBenefits = [
-  "Presença digital mais profissional",
-  "Maior percepção de confiança",
-  "Informações consistentes",
-  "Caminhos de contato claros",
-  "Mais capacidade de apresentar e vender o negócio",
+  "Presença mais profissional",
+  "Informações consistentes entre canais",
+  "Caminhos claros para apresentar e receber contatos",
 ];
-

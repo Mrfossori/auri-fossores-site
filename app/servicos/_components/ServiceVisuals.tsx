@@ -2,14 +2,10 @@ import Image from "next/image";
 import {
   BellRing,
   Check,
-  Globe2,
-  Instagram,
-  Megaphone,
-  MessageCircle,
   PackageCheck,
   ReceiptText,
-  Search,
 } from "lucide-react";
+import type { PositioningGroup } from "../content";
 import styles from "../servicos.module.css";
 
 const automationSteps = [
@@ -17,14 +13,6 @@ const automationSteps = [
   { label: "Venda registrada", icon: Check },
   { label: "Estoque atualizado", icon: PackageCheck },
   { label: "Equipe avisada", icon: BellRing },
-];
-
-const presenceChannels = [
-  { label: "Google", icon: Search },
-  { label: "Site", icon: Globe2 },
-  { label: "Instagram", icon: Instagram },
-  { label: "WhatsApp", icon: MessageCircle },
-  { label: "Criativos", icon: Megaphone },
 ];
 
 export function AutomationFlow() {
@@ -47,13 +35,27 @@ export function AutomationFlow() {
 export function ErpShowcase() {
   return (
     <div className={styles.erpShowcase} aria-label="Telas funcionais do AdegaERP">
-      <div className={styles.erpHeading}>
-        <span className={styles.visualLabel}>AdegaERP</span>
-        <p>Dashboard e financeiro conectados à mesma visão da operação.</p>
+      <div className={styles.erpIntro}>
+        <div className={styles.erpHeading}>
+          <span className={styles.visualLabel}>Solução funcional desenvolvida pela Auri</span>
+          <h3>AdegaERP</h3>
+          <p>
+            Vendas, produtos, estoque, pagamentos, relatórios e financeiro reunidos em uma única
+            operação.
+          </p>
+        </div>
+        <aside className={styles.secondaryProof}>
+          <span>Outro sistema desenvolvido</span>
+          <strong>Sistema de agendamento</strong>
+          <p>Organiza horários, serviços e a rotina de atendimento.</p>
+        </aside>
       </div>
 
       <div className={styles.erpGallery}>
-        <figure className={`${styles.browserFrame} ${styles.dashboardFrame}`}>
+        <figure
+          className={`${styles.browserFrame} ${styles.dashboardFrame}`}
+          data-erp-screen="primary"
+        >
           <div className={styles.browserBar} aria-hidden="true">
             <span />
             <span />
@@ -69,10 +71,13 @@ export function ErpShowcase() {
               sizes="(min-width: 1280px) 52rem, (min-width: 768px) 70vw, 42rem"
             />
           </div>
-          <figcaption>Receita, vendas, produtos, pagamentos e estoque em uma única leitura.</figcaption>
+          <figcaption>Visão geral de vendas, produtos, pagamentos e estoque.</figcaption>
         </figure>
 
-        <figure className={`${styles.browserFrame} ${styles.financeFrame}`}>
+        <figure
+          className={`${styles.browserFrame} ${styles.financeFrame}`}
+          data-erp-screen="support"
+        >
           <div className={styles.browserBar} aria-hidden="true">
             <span />
             <span />
@@ -88,34 +93,25 @@ export function ErpShowcase() {
               sizes="(min-width: 1280px) 34rem, (min-width: 768px) 58vw, 42rem"
             />
           </div>
-          <figcaption>Receitas, saídas, contas a pagar, fornecedores e atividade recente.</figcaption>
+          <figcaption>Financeiro, despesas, contas a pagar e atividade recente.</figcaption>
         </figure>
       </div>
     </div>
   );
 }
 
-export function DigitalPresenceMap() {
+export function DigitalPresenceMap({ groups }: { groups: PositioningGroup[] }) {
   return (
     <div className={styles.presenceMap} aria-label="Estrutura de presença digital organizada">
-      <span className={styles.visualLabel}>Presença conectada</span>
-      <div className={styles.channelGrid}>
-        {presenceChannels.map(({ label, icon: Icon }) => (
-          <div key={label}>
+      <span className={styles.visualLabel}>Entregas organizadas</span>
+      <div className={styles.positioningGroupGrid}>
+        {groups.map(({ title, description, icon: Icon }) => (
+          <article key={title}>
             <Icon aria-hidden="true" />
-            <strong>{label}</strong>
-          </div>
+            <strong>{title}</strong>
+            <p>{description}</p>
+          </article>
         ))}
-      </div>
-      <div className={styles.presenceComparison}>
-        <div>
-          <span>Antes</span>
-          <p>Canais incompletos e informações desencontradas.</p>
-        </div>
-        <div>
-          <span>Depois</span>
-          <p>Presença organizada e contato facilitado.</p>
-        </div>
       </div>
       <ol className={styles.presenceJourney} aria-label="Caminho até uma oportunidade">
         {[
@@ -130,4 +126,3 @@ export function DigitalPresenceMap() {
     </div>
   );
 }
-

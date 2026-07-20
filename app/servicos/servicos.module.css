@@ -1,5 +1,5 @@
 .servicesPage {
-  --service-space: clamp(4rem, 10vw, 6.5rem);
+  --service-space: clamp(3.5rem, 8vw, 5.25rem);
   overflow: clip;
 }
 
@@ -66,6 +66,7 @@
 
 .overviewSection {
   border-bottom: 0.0625rem solid var(--line);
+  padding-block: clamp(3rem, 7vw, 4.5rem);
 }
 
 .sectionHeading {
@@ -102,7 +103,6 @@
   position: relative;
   display: flex;
   min-width: 0;
-  min-height: 20rem;
   flex-direction: column;
   overflow: hidden;
   border: 0.0625rem solid var(--line);
@@ -131,7 +131,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .serviceIndex > a > div svg {
@@ -146,8 +146,7 @@
 .visualLabel,
 .copyLabel,
 .sectionNumber,
-.proofList article > span,
-.presenceComparison span {
+.secondaryProof > span {
   color: var(--gold);
   font-family: Consolas, "JetBrains Mono", monospace;
   font-size: 0.68rem;
@@ -231,7 +230,7 @@
 .splitContent {
   display: grid;
   gap: clamp(2rem, 8vw, 4rem);
-  margin-top: clamp(2.5rem, 8vw, 4rem);
+  margin-top: clamp(2rem, 6vw, 3rem);
 }
 
 .problemBlock,
@@ -246,7 +245,7 @@
 
 .problemBlock h3,
 .resultRow h3,
-.proofHeading h3 {
+.erpHeading h3 {
   margin: 0.75rem 0 0;
   color: white;
   font-family: Georgia, "Times New Roman", serif;
@@ -275,7 +274,7 @@
 .benefitList {
   display: grid;
   gap: 0;
-  margin: 1.5rem 0 0;
+  margin: 1.15rem 0 0;
   padding: 0;
   list-style: none;
 }
@@ -283,11 +282,11 @@
 .bulletList li,
 .benefitList li {
   display: grid;
-  min-height: 3.25rem;
+  min-height: 2.75rem;
   align-items: center;
   gap: 0.75rem;
   border-top: 0.0625rem solid var(--line);
-  padding-block: 0.7rem;
+  padding-block: 0.55rem;
   color: rgba(245, 240, 232, 0.78);
   font-size: 0.86rem;
   line-height: 1.5;
@@ -310,7 +309,7 @@
 .erpShowcase,
 .presenceMap {
   min-width: 0;
-  margin-top: clamp(3rem, 9vw, 5.5rem);
+  margin-top: clamp(2.25rem, 6vw, 3.75rem);
 }
 
 .automationFlow {
@@ -344,11 +343,11 @@
 .automationFlow li {
   position: relative;
   display: grid;
-  min-height: 6rem;
+  min-height: 5rem;
   align-items: center;
   gap: 0.8rem;
   border-top: 0.0625rem solid var(--line);
-  padding-block: 1rem;
+  padding-block: 0.8rem;
   grid-template-columns: auto auto 1fr;
 }
 
@@ -374,7 +373,7 @@
   gap: 1.5rem;
   align-items: start;
   border-top: 0.0625rem solid var(--line-gold);
-  margin-top: clamp(3rem, 9vw, 5rem);
+  margin-top: clamp(2.25rem, 6vw, 3.5rem);
   padding-top: clamp(1.5rem, 5vw, 2.25rem);
 }
 
@@ -403,53 +402,14 @@
   font-weight: 700;
 }
 
-.proofSection {
-  display: grid;
-  gap: 2rem;
-  border-block: 0.0625rem solid var(--line);
-  margin-top: clamp(3rem, 9vw, 5rem);
-  padding-block: clamp(2rem, 6vw, 3rem);
-}
-
-.proofHeading {
-  max-width: 35rem;
-}
-
-.proofList {
-  display: grid;
-  gap: 0.75rem;
-}
-
-.proofList article {
-  display: grid;
-  min-height: 8.5rem;
-  align-items: start;
-  gap: 1rem;
-  border: 0.0625rem solid var(--line);
-  border-radius: 0.5rem;
-  padding: 1.2rem;
-  background: var(--void);
-  grid-template-columns: auto 1fr;
-}
-
-.proofList h4 {
-  margin: 0;
-  color: white;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.35rem;
-  font-weight: 500;
-}
-
-.proofList p {
-  margin: 0.65rem 0 0;
-  color: var(--muted);
-  font-size: 0.84rem;
-  line-height: 1.65;
-}
-
 .erpShowcase {
   border-top: 0.0625rem solid var(--line-gold);
   padding-top: clamp(1.5rem, 5vw, 2.25rem);
+}
+
+.erpIntro {
+  display: grid;
+  gap: 1.25rem;
 }
 
 .erpHeading {
@@ -457,24 +417,43 @@
   gap: 0.25rem;
 }
 
+.erpHeading h3 {
+  max-width: 14ch;
+}
+
 .erpHeading p {
   max-width: 36rem;
   margin-top: 0.5rem;
+}
+
+.secondaryProof {
+  display: grid;
+  gap: 0.45rem;
+  border-top: 0.0625rem solid var(--line);
+  padding-top: 1rem;
+}
+
+.secondaryProof strong {
+  color: white;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.secondaryProof p {
+  max-width: 28rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
 }
 
 .erpGallery {
   display: grid;
   max-width: 100%;
   gap: 1rem;
-  overflow-x: auto;
   margin-top: 1.5rem;
-  padding: 0.25rem 0 1rem;
-  grid-auto-columns: 40rem;
-  grid-auto-flow: column;
-  scroll-snap-type: x mandatory;
-  scrollbar-color: var(--gold) rgba(245, 240, 232, 0.08);
-  scrollbar-width: thin;
-  overscroll-behavior-inline: contain;
+  padding-top: 0.25rem;
 }
 
 .browserFrame {
@@ -485,7 +464,6 @@
   margin: 0;
   background: #161412;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.35);
-  scroll-snap-align: start;
 }
 
 .browserBar {
@@ -527,23 +505,28 @@
 }
 
 .dashboardViewport {
-  aspect-ratio: 1920 / 1110;
+  aspect-ratio: 4 / 3;
 }
 
 .financeViewport {
-  aspect-ratio: 1920 / 1785;
+  aspect-ratio: 4 / 3;
 }
 
 .screenshotViewport img {
   display: block;
   width: 100%;
   max-width: none;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.dashboardViewport img {
+  object-position: top left;
 }
 
 .browserFrame figcaption {
-  min-height: 4.5rem;
-  padding: 1rem;
+  padding: 0.85rem 1rem;
   color: var(--muted);
   font-size: 0.76rem;
   line-height: 1.55;
@@ -560,68 +543,45 @@
     var(--void);
 }
 
-.channelGrid {
+.positioningGroupGrid {
   display: grid;
   gap: 0.75rem;
-  margin-top: 1.5rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1.25rem;
 }
 
-.channelGrid > div {
+.positioningGroupGrid article {
   display: grid;
-  min-height: 6.5rem;
-  align-content: space-between;
-  gap: 1rem;
+  min-width: 0;
+  align-content: start;
+  gap: 0.65rem;
   border: 0.0625rem solid var(--line);
   border-radius: 0.4rem;
   padding: 1rem;
   background: rgba(0, 0, 0, 0.2);
 }
 
-.channelGrid > div:last-child {
-  grid-column: 1 / -1;
-}
-
-.channelGrid svg {
+.positioningGroupGrid svg {
   color: var(--gold);
 }
 
-.channelGrid strong {
+.positioningGroupGrid strong {
   color: white;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 500;
 }
 
-.presenceComparison {
-  display: grid;
-  gap: 0.75rem;
-  margin-top: 0.75rem;
-}
-
-.presenceComparison > div {
-  min-height: 7rem;
-  border: 0.0625rem solid var(--line);
-  border-radius: 0.4rem;
-  padding: 1rem;
-}
-
-.presenceComparison > div:last-child {
-  border-color: var(--line-gold);
-  background: rgba(201, 162, 39, 0.06);
-}
-
-.presenceComparison p {
-  margin: 0.75rem 0 0;
+.positioningGroupGrid p {
+  margin: 0;
   color: var(--muted);
-  font-size: 0.84rem;
-  line-height: 1.6;
+  font-size: 0.8rem;
+  line-height: 1.55;
 }
 
 .presenceJourney {
   display: grid;
   gap: 0;
-  margin: 1.5rem 0 0;
+  margin: 1rem 0 0;
   padding: 0;
   list-style: none;
 }
@@ -653,7 +613,7 @@
 }
 
 .finalCta {
-  padding-block: clamp(4rem, 11vw, 7rem);
+  padding-block: clamp(3rem, 8vw, 5rem);
 }
 
 .finalCta > div {
@@ -698,8 +658,7 @@
   margin-top: 1.5rem;
 }
 
-.serviceIndex > a:focus-visible,
-.erpGallery:focus-visible {
+.serviceIndex > a:focus-visible {
   outline: 0.125rem solid var(--gold);
   outline-offset: 0.2rem;
 }
@@ -709,22 +668,15 @@
     padding: 1.4rem;
   }
 
-  .channelGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 768px) {
   .servicesPage {
-    --service-space: clamp(5rem, 8vw, 7rem);
+    --service-space: clamp(4.25rem, 6vw, 5.5rem);
   }
 
   .serviceIndex {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .serviceIndex > a {
-    min-height: 22rem;
   }
 
   .serviceTitleRow {
@@ -745,7 +697,7 @@
   }
 
   .automationFlow li {
-    min-height: 10rem;
+    min-height: 8rem;
     align-content: start;
     border-top: 0.0625rem solid var(--line);
     border-right: 0.0625rem solid var(--line);
@@ -771,31 +723,38 @@
     grid-column: 1 / -1;
   }
 
-  .proofSection {
-    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
-  }
-
-  .proofList {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .erpGallery {
-    overflow: visible;
-    padding-bottom: 0;
-    grid-auto-columns: unset;
-    grid-auto-flow: row;
     grid-template-columns: 1fr;
   }
 
-  .channelGrid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+  .erpIntro {
+    align-items: end;
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.55fr);
   }
 
-  .channelGrid > div:last-child {
-    grid-column: auto;
+  .secondaryProof {
+    border-top: 0;
+    border-left: 0.0625rem solid var(--line);
+    padding: 0 0 0 1.25rem;
   }
 
-  .presenceComparison {
+  .dashboardViewport {
+    aspect-ratio: 1920 / 1110;
+  }
+
+  .financeFrame {
+    position: relative;
+    z-index: 2;
+    width: 62%;
+    margin-top: -3rem;
+    margin-left: auto;
+  }
+
+  .financeViewport {
+    aspect-ratio: 16 / 10;
+  }
+
+  .positioningGroupGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -825,10 +784,6 @@
 }
 
 @media (min-width: 1280px) {
-  .serviceIndex > a {
-    min-height: 23rem;
-  }
-
   .resultRow {
     align-items: end;
     grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.75fr) auto;
@@ -839,22 +794,24 @@
   }
 
   .erpGallery {
-    align-items: start;
-    gap: 0;
-    padding-bottom: 2rem;
-    grid-template-columns: minmax(0, 1.45fr) minmax(20rem, 0.75fr);
+    display: block;
+    padding-bottom: 1rem;
   }
 
   .financeFrame {
-    position: relative;
-    z-index: 2;
-    margin-top: 5.5rem;
-    margin-left: -3.5rem;
+    width: 36%;
+    margin-top: -10rem;
+    margin-left: auto;
   }
 
   .dashboardFrame {
     position: relative;
     z-index: 1;
+    width: 82%;
+  }
+
+  .positioningGroupGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -871,4 +828,3 @@
     transition: none;
   }
 }
-
